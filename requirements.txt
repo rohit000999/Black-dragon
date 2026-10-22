@@ -2,4 +2,4 @@ flask
 telethon
 pyTelegramBotAPI
 python-telegram-bot
-http
+httpx
