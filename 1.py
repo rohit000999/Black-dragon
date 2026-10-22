@@ -9,6 +9,23 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.types import ReactionEmoji, DataJSON
 import telebot
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Bot is alive"
+
+
+def run():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
+
+t = threading.Thread(target=run)
+t.start()
+
 
 # Environment Variables se credentials load karein (Security best practice)
 API_ID = int(os.environ.get("API_ID", 39657203))
