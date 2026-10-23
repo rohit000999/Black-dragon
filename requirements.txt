@@ -3,3 +3,4 @@ telethon
 pyTelegramBotAPI
 python-telegram-bot
 httpx
+firebase-admin
